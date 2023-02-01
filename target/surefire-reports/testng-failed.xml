@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [[Demo] Windows: TestNG Execution using HyperExecute]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="1" parallel="methods" name="Test6(failed)" verbose="0">
+    <classes>
+      <class name="Test6">
+        <methods>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- Test6 -->
+    </classes>
+  </test> <!-- Test6(failed) -->
+</suite> <!-- Failed suite [[Demo] Windows: TestNG Execution using HyperExecute] -->

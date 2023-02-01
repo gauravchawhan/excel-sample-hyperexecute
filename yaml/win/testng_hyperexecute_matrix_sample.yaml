@@ -1,0 +1,33 @@
+---
+version: 0.1
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+
+runson: win
+
+captureScreenRecordingForScenarios: true
+# retryOnFailure: true
+
+# maxRetries: 1
+concurrency: 5
+betaFeature:
+   setPartiallyCompletedAsCompleted: true
+env:
+  CACHE_DIR: m2_cache_dir
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+
+pre:
+  - ipconfig
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve -Dmaven.test.skip=true clean install
+
+mergeArtifacts: true
+
+matrix:
+  tests: ["Test6","Test1"]
+
+testSuites:
+  - mvn test `-Dmaven.repo.local=./.m2 dependency:resolve `-Dtest=$tests

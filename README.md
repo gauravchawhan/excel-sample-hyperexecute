@@ -32,6 +32,7 @@ If not signed up, you need to sign up and simultaneously redirected to Gitpod in
 # How to run Selenium automation tests on HyperExecute (using TestNG framework)
 
 * [Pre-requisites](#pre-requisites)
+   - [Configure Lambdatest account](#permissions)
    - [Download HyperExecute CLI](#download-hyperexecute-cli)
    - [Configure Environment Variables](#configure-environment-variables)
 
@@ -55,6 +56,9 @@ If not signed up, you need to sign up and simultaneously redirected to Gitpod in
 # Pre-requisites
 
 Before using HyperExecute, you have to download HyperExecute CLI corresponding to the host OS. Along with it, you also need to export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
+
+## Permissions
+You need to configure your lambdatest account by asking the customer support to configure your orgID to the excel scaleset to run any excel test cases into your account. 
 
 ## Download HyperExecute CLI
 
